@@ -14,11 +14,6 @@ A native macOS REST API client built with SwiftUI and SwiftData. A lightweight P
 - **Request Editor** - Configure URL, headers, query parameters, body, and authentication
 - **Response Viewer** - View response status, headers, and formatted JSON body
 
-### Environment Variables
-- Define reusable variables like `{{baseUrl}}`, `{{apiKey}}`
-- Switch between environments (Development, Staging, Production)
-- Variables are interpolated in URLs, headers, body, and auth fields
-
 ### Authentication
 - **Bearer Token** - JWT and OAuth token support
 - **Basic Auth** - Username/password with Base64 encoding
@@ -64,13 +59,6 @@ Export requests as code in multiple languages:
 4. Configure headers, parameters, body as needed
 5. Press **⌘↩** or click "Send"
 
-### Using Environment Variables
-1. Navigate to **Environments** in the sidebar
-2. Create a new environment
-3. Add variables (e.g., `baseUrl` = `https://api.example.com`)
-4. Select the environment from the toolbar dropdown
-5. Use `{{variableName}}` syntax in your requests
-
 ### Keyboard Shortcuts
 
 | Action | Shortcut |
@@ -81,7 +69,6 @@ Export requests as code in multiple languages:
 | Save Request | ⌘S |
 | Duplicate Request | ⌘D |
 | Generate Code | ⇧⌘G |
-| Manage Environments | ⌥⌘E |
 
 ## Project Structure
 
@@ -93,11 +80,9 @@ PostWoman/
 │   ├── Sidebar/           # Collection tree and history
 │   ├── RequestEditor/     # URL bar and request tabs
 │   ├── ResponseViewer/    # Response display
-│   ├── Environment/       # Environment management
 │   └── CodeGeneration/    # Code export
 ├── Services/
 │   ├── HTTPClient.swift   # Networking
-│   ├── EnvironmentInterpolator.swift
 │   ├── AuthenticationHandler.swift
 │   └── CodeGenerator/     # cURL, Swift, Python generators
 └── Utilities/             # JSON formatting, helpers
